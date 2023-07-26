@@ -14,7 +14,6 @@ class SLinkedList:
         for i in range(1, len(data)):
             current.next_val = Node(data[i])
             current = current.next_val
-            i += 1
 
     def search_middle_element(self):
         priv_element = self.head_val
