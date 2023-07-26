@@ -5,10 +5,11 @@ def read_data_stream():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--list', nargs='*')
     namespace = parser.parse_args()
+    input_data = ['']
     if namespace.list is not None:
         return namespace.list
     else:
-        input_data = input("Input data:").split(" ")
+#        input_data = input("Input data:").split(" ")
         return input_data
 
 
@@ -24,6 +25,8 @@ class SLinkedList:
 
 
     def fill_list(self, data):
+        if data is None:
+            print
         self.head_val = Node(data[0])
         current = self.head_val
         for i in range(1, len(data)):

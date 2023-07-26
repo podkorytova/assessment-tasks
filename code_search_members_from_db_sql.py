@@ -25,7 +25,7 @@ class Organization:
 
 class DataBase:
     def __init__(self):
-        self.connect = sqlite3.connect('search-members-from-db-sql.s3db')
+        self.connect = sqlite3.connect('search_members_from_db_sql.s3db')
         self.cursor = self.connect.cursor()
         if not self.check_exist_table('members'):
             self.cursor.execute(
