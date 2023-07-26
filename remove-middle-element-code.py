@@ -1,3 +1,17 @@
+import argparse
+
+
+def read_data_stream():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-l', '--list', nargs='*')
+    namespace = parser.parse_args()
+    if namespace.list is not None:
+        return namespace.list
+    else:
+        input_data = input("Input data:").split(" ")
+        return input_data
+
+
 class Node:
     def __init__(self, data_val):
         self.data_val = data_val
@@ -7,6 +21,7 @@ class Node:
 class SLinkedList:
     def __init__(self):
         self.head_val = None
+
 
     def fill_list(self, data):
         self.head_val = Node(data[0])
@@ -49,8 +64,7 @@ class SLinkedList:
 
 
 current_list = SLinkedList()
-input_data = input("Input data:").split(" ")
-current_list.fill_list(input_data)
+current_list.fill_list(read_data_stream())
 previous, middle = current_list.search_middle_element()
 current_list.delete_element(previous, middle)
 current_list.list_print()
