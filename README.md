@@ -1,5 +1,5 @@
 ## This repository contains solution for Automatiion Teeam Asesment which I got from your HR specialist
-All code is made by standard python libraries, I hope it doesn't have some dependencies and you need just python3.11 for run all scripts
+All code is made by standard python libraries(random, unittest, argparse, sqlite3, subprocess), I hope it doesn't have some dependencies and you need just python3.11 for run all scripts
 
 - Task1 Remove middle element, contains:
 - - code_remove_middle_element.py - script with main code, you can run it without args and it ask you for data in console OR with parameter('-l', '--list', nargs='*') and put elements one by one with whitespace. 
